@@ -59,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Revive.cs" />
     <Compile Include="UI.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="WeaponManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

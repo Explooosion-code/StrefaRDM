@@ -45,7 +45,8 @@ namespace StrefaRDM
                                     {
                                         if (playerKiller.Character.Handle == killer.Handle)
                                         {
-                                            items.Add(new KillFeedItem(playerKiller.Name, p.Name));
+                                            bool wasHeadshot = Utils.GetPedHitLocation(p.Character.Handle) == "head";
+                                            items.Add(new KillFeedItem(playerKiller.Name, p.Name, wasHeadshot));
                                             found = true;
                                             break;
                                         }

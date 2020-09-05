@@ -12,13 +12,15 @@ namespace StrefaRDM
         public string Killer, Killed;
         public float frameTime;
         public int timeleft = 8; // sec
-        public bool isYours = false;
-        public bool isKiller = false;
+        public bool isYours;
+        public bool isKiller;
+        public bool isHeadShot;
 
-        public KillFeedItem(string _kl, string _kld)
+        public KillFeedItem(string _kl, string _kld, bool headshot = false)
         {
             Killer = _kl.Length > 12 ? _kl.Substring(0, 10) + "..." : _kl;
             Killed = _kld.Length > 12 ? _kld.Substring(0, 10) + "..." : _kld;
+            isHeadShot = headshot;
             if(_kl == Game.Player.Name)
             {
                 isYours = true;
@@ -32,6 +34,10 @@ namespace StrefaRDM
 
         public string GetDisplay()
         {
+            if (isHeadShot)
+            {
+                return Killer == "" ? $"{Killed}  -> 💀 {Killed}" : $"{Killer}  -> 💀 {Killed}";
+            }
             return Killer == "" ? $"{Killed}  ->   {Killed}" : $"{Killer}  ->  {Killed}";
         }
     }
