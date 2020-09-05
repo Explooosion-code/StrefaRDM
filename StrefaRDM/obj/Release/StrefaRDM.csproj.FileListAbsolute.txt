@@ -1,0 +1,15 @@
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\StrefaRDM.net.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\StrefaRDM.net.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\System.Reflection.Metadata.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\System.Collections.Immutable.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\MsgPack.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.xml
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\MsgPack.xml
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csprojAssemblyReference.cache
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csproj.CopyComplete
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\MenuAPI.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.Client.dll

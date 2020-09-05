@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\PC\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_StrefaRDM.91496074.00" t="ExcludeRecursive" />
+    <e p="C:\Users\PC\source\repos\StrefaRDM" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="StrefaRDM" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="KillFeed.cs" t="Include" />
+        <e p="KillFeedItem.cs" t="Include" />
+        <e p="KillStats.cs" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="PedMenu.cs" t="Include" />
+        <e p="PlayerList.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Revive.cs" t="Include" />
+        <e p="StrefaRDM.csproj" t="IncludeRecursive" />
+        <e p="UI.cs" t="Include" />
+        <e p="WeaponManager.cs" t="Include" />
+      </e>
+      <e p="StrefaRDM.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

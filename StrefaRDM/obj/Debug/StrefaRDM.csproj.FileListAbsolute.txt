@@ -1,0 +1,15 @@
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\StrefaRDM.net.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\StrefaRDM.net.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\CitizenFX.Core.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\System.Collections.Immutable.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\MsgPack.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\CitizenFX.Core.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\CitizenFX.Core.xml
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\MsgPack.xml
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Debug\StrefaRDM.csprojAssemblyReference.cache
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Debug\StrefaRDM.csproj.CopyComplete
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Debug\StrefaRDM.net.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Debug\StrefaRDM.net.pdb
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\CitizenFX.Core.Client.dll
+C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Debug\MenuAPI.dll
