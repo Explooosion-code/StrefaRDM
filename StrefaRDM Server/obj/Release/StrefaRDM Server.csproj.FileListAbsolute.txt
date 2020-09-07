@@ -1,0 +1,12 @@
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\CitizenFX.Core.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\MsgPack.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\CitizenFX.Core.pdb
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\CitizenFX.Core.xml
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\MsgPack.xml
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\obj\Release\StrefaRDM Server.csprojAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\obj\Release\StrefaRDM Server.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\obj\Release\StrefaRDM Server.csproj.CopyComplete
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\StrefaRDM Server.net.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\bin\Release\StrefaRDM Server.net.pdb
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\obj\Release\StrefaRDM Server.net.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM Server\obj\Release\StrefaRDM Server.net.pdb

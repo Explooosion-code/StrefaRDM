@@ -18,6 +18,7 @@ namespace StrefaRDM
 
         public Main()
         {
+            Debug.WriteLine("eerdjaikldjsal;kd");
             NetworkSetFriendlyFireOption(true);
             TriggerServerEvent("srdm:getCurrentPosition");
             EventHandlers["srdm:setCurrentPosition"] += new Action<dynamic, List<dynamic>, int>((spawnpos, respawns, mD) =>
@@ -56,6 +57,7 @@ namespace StrefaRDM
                     Tick += stamina;
                 }
                 TriggerServerEvent("srdm:requestUserInfo");
+                TriggerServerEvent("srdm:playerSpawned");
                 SetToRandomResp();
             });
             Tick += noHandFight;

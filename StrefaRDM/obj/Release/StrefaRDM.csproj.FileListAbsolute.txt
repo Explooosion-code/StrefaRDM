@@ -13,3 +13,17 @@ C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.dll
 C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.pdb
 C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\MenuAPI.dll
 C:\Users\PuddyLoL\source\repos\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.Client.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\StrefaRDM.net.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\StrefaRDM.net.pdb
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\MenuAPI.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\System.Reflection.Metadata.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\System.Collections.Immutable.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\MsgPack.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.pdb
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.xml
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\MsgPack.xml
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csprojAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csproj.CopyComplete
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.pdb
