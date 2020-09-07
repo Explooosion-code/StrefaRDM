@@ -523,10 +523,9 @@ namespace StrefaRDM
                     Game.PlayerPed.Weapons[hash].InfiniteAmmo = true;
                 }
                 return true;
-            } else
-            {
-                return false;
             }
+
+            return false;
         }
     }
 }
