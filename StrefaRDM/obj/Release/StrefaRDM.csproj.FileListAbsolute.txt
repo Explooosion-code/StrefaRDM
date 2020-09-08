@@ -27,3 +27,5 @@ C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csproj.Co
 C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.csproj.CopyComplete
 C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.dll
 C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\obj\Release\StrefaRDM.net.pdb
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.Client.dll
+C:\Users\PC\Documents\GitHub\StrefaRDM\StrefaRDM\bin\Release\CitizenFX.Core.dll

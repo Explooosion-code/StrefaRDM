@@ -98,10 +98,10 @@ namespace StrefaRDM
 
                 PushScaleformMovieFunctionParameterInt(0);
                 PushScaleformMovieFunctionParameterInt(0);
-                if (id == Game.Player.ServerId)
+                if (id == Game.Player.ServerId) 
                     PushScaleformMovieFunctionParameterString("~g~" + kills.ToString());
                 else
-                    PushScaleformMovieFunctionParameterString(kills.ToString()); ;
+                    PushScaleformMovieFunctionParameterString(kills.ToString());
 
                 PushScaleformMovieFunctionParameterBool(false);
                 PushScaleformMovieFunctionParameterBool(false);
