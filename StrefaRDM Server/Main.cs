@@ -10,8 +10,8 @@ namespace StrefaRDM_Server
 {
     public class Main : BaseScript
     {
-        // Index of zone that is currently running TODO: Random map on start
-        private int currentZone = 1;
+        // Index of zone that is currently running
+        private int currentZone = new Random().Next(0, Config.Positions.Count - 1);
         // In seconds, is decremented every 1000ms
         private int timeToNextZone =Config.MapChangeTime; 
         // Holds all SrdmPlayer objects
