@@ -18,12 +18,10 @@ namespace StrefaRDM
 
         public Main()
         {
-            Debug.WriteLine("eerdjaikldjsal;kd");
             NetworkSetFriendlyFireOption(true);
             TriggerServerEvent("srdm:getCurrentPosition");
             EventHandlers["srdm:setCurrentPosition"] += new Action<dynamic, List<dynamic>, int>((spawnpos, respawns, mD) =>
             {
-                Debug.WriteLine("LOADED");
                 playerSpawnPos = spawnpos;
                 RandomRespawns = new List<Vector3>();
                 maxDist = mD;

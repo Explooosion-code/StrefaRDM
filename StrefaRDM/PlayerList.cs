@@ -18,7 +18,6 @@ namespace StrefaRDM
         {
             EventHandlers["srdm:syncPlayerData"] += new Action<List<dynamic>>(playersData =>
             {
-                Debug.WriteLine("AHA" + playersData.Count.ToString());
                 playersInfo = playersData;
             });
 
@@ -75,12 +74,8 @@ namespace StrefaRDM
             PushScaleformMovieFunctionParameterString("~b~Kills");
             PopScaleformMovieFunctionVoid();
             int i = 0;
-            Debug.WriteLine(playersInfo.Count.ToString());
             foreach(var player in playersInfo)
             {
-                Debug.WriteLine(player.name.ToString());
-                Debug.WriteLine(player.sourceId.ToString());
-                Debug.WriteLine(player.sessionKills.ToString());
                 if (i > 14)
                 {
                     break;

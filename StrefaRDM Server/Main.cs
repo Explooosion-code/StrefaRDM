@@ -10,8 +10,11 @@ namespace StrefaRDM_Server
 {
     public class Main : BaseScript
     {
+        // Index of zone that is currently running TODO: Random map on start
         private int currentZone = 1;
+        // In seconds, is decremented every 1000ms
         private int timeToNextZone =Config.MapChangeTime; 
+        // Holds all SrdmPlayer objects
         static Dictionary<string, SrdmPlayer> playersData = new Dictionary<string, SrdmPlayer>();
 
         public Main()
@@ -38,7 +41,7 @@ namespace StrefaRDM_Server
                 syncZoneInfo();
             });
 
-            EventHandlers["srdm:playerSpawned"] += new Action<Player>(Spawned);
+            EventHandlers["srdm:playerSpawned"] += new Action<Player>(Spawned); // Create server SrdmPlayer object for source
 
             Tick += OnTick;
             Tick += MapTick;
@@ -46,12 +49,12 @@ namespace StrefaRDM_Server
 
         async Task OnTick()
         {
-            await Delay(120000);
+            await Delay(120000); // You still save when player dropps but just to make sure lets save every 2 minutes
 
             foreach (KeyValuePair<string, SrdmPlayer> player in playersData)
             {
                 savePlayer(player.Value);
-                await Delay(1);
+                await Delay(1); // Just to not spam the db send one per frame
             }
         }
 
@@ -65,45 +68,41 @@ namespace StrefaRDM_Server
             {
                 int newZone = currentZone;
 
-                while (newZone == currentZone)
+                while (newZone == currentZone) // Not let the map be the same for two rounds
                 {
                     await Delay(1);
-                    newZone = new Random().Next(0, Config.Positions.Count -1);
+                    newZone = new Random().Next(0, Config.Positions.Count -1); // Picking a random zone;
                 }
 
                 currentZone = newZone;
 
-                timeToNextZone = Config.MapChangeTime;
+                timeToNextZone = Config.MapChangeTime; // reset the time
 
                 foreach (KeyValuePair<string, SrdmPlayer> player in playersData)
                 {
-                    player.Value.resetKills();
+                    player.Value.resetKills(); // Reset all players kills
                 }
 
-                Exports["mysql-async"].mysql_execute("UPDATE users SET kills = 0",
-                    new
-                    {
-                        
-                    });
+                Exports["mysql-async"].mysql_execute("UPDATE users SET kills = 0", new{}); // Reset kills for offline players too
 
                 syncZoneInfo();
 
                 TriggerClientEvent("chatMessage", "SYSTEM", new[] {255, 0, 0},
-                    "Nastąpiła zmiana mapy! Obecna mapa to: " + Config.Positions[currentZone].Name + "!");
+                    "Map changed! Currently playing on: " + Config.Positions[currentZone].Name + "!");
                 TriggerClientEvent("srdm:roundChanged");
 
                 await Delay(100);
 
                 for (int i = 5; i > 0; i--)
                 {
-                    TriggerClientEvent("chatMessage","SYSTEM", new[] { 255, 0, 0 }, "Start za " + i);
+                    TriggerClientEvent("chatMessage","SYSTEM", new[] { 255, 0, 0 }, "Starting in " + i);
                     await Delay(1000);
                 }
             } else if (timeToNextZone % 300 == 0)
             {
                 syncZoneInfo();
                 TriggerClientEvent("chatMessage", "SYSTEM", new[] {255, 0, 0},
-                    "Za: " + Math.Floor(timeToNextZone / 60.0) + " minut(y) nastąpi zmiana mapy!");
+                    "Map will change in: " + Math.Floor(timeToNextZone / 60.0) + " minutes!");
             }
         }
 

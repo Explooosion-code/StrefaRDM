@@ -4,10 +4,10 @@ using static CitizenFX.Core.Native.API;
 
 namespace StrefaRDM_Server
 {
-    public static class Config
+    public static class Config // TODO: Add a json file reading so user can easily change config...
     {
         public static int MapChangeTime = 2700;
-        public static Dictionary<int, string> Weapons = new Dictionary<int, string>()
+        public static Dictionary<int, string> Weapons = new Dictionary<int, string>() // INT is the amount of kills and string is a weapon code
         {
            [0] = "WEAPON_SNSPISTOL",
            [10] = "WEAPON_SNSPISTOL_MK2",
@@ -22,7 +22,7 @@ namespace StrefaRDM_Server
 
         public static List<Position> Positions = new List<Position>()
         {
-            new Position("Obóz altruistów", new Vector3(-1116.06f, 4924.5f, 218.12f), 90, new List<Vector3>()
+            new Position("Altruist Camp", new Vector3(-1116.06f, 4924.5f, 218.12f), 90, new List<Vector3>()
             {
                 new Vector3(-1139.475f, 4964.874f, 222.2f),
                 new Vector3(-1096.64f, 4949.015f, 218.35f),
