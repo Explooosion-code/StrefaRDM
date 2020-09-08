@@ -37,6 +37,8 @@ namespace StrefaRDM
                 DrawTxt(0.92f, 0.92f, $"{hp}", 0.8f, 191, 27, 84);
             }
             DrawTxt(0.945f, 0.925f, "➕", 0.45f, 255, 0, 0);
+            
+            DrawTxt(0f, 0.98f, "StrefaRDM", 0.3f, 200, 200, 200);
         }
 
         static void DrawTxt(float x, float y, string text, float scale = 0.55f, int r = 255, int g = 255, int b = 255)

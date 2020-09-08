@@ -71,7 +71,7 @@ namespace StrefaRDM_Server
                 while (newZone == currentZone) // Not let the map be the same for two rounds
                 {
                     await Delay(1);
-                    newZone = new Random().Next(0, Config.Positions.Count -1); // Picking a random zone;
+                    newZone = new Random().Next(0, Config.Positions.Count); // Picking a random zone;
                 }
 
                 currentZone = newZone;
@@ -158,14 +158,22 @@ namespace StrefaRDM_Server
         {
             string source = player.Handle;
 
-            SrdmPlayer srdmPlayer = playersData?[source];
-
-            if (srdmPlayer != null)
+            try
             {
-                savePlayer(srdmPlayer); // save player on disconnect
+                SrdmPlayer srdmPlayer = playersData[source];
+
+                if (srdmPlayer != null)
+                {
+                    savePlayer(srdmPlayer); // save player on disconnect
+                }
+
+                playersData.Remove(source);
+                syncData(); // Remove player from player list
             }
-            playersData.Remove(source);
-            syncData(); // Remove player from player list
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
         }
         
         private void savePed([FromSource]Player player, string pedModel)
