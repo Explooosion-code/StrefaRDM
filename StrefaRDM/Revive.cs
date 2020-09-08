@@ -66,16 +66,13 @@ namespace StrefaRDM
 
             int ped = GetPlayerPed(-1);
           
-            if(IsEntityDead(ped))
+            if(IsEntityDead(ped) && !countdownPlaying)
             {
                 SetPlayerInvincible(PlayerId(), true);
                 SetEntityHealth(ped, 1);
-                if(!countdownPlaying)
-                {
-                    currentWeapon = Game.PlayerPed.Weapons.Current;
-                    startCountDown();
-                    countdownPlaying = true;
-                }
+                currentWeapon = Game.PlayerPed.Weapons.Current;
+                startCountDown();
+                countdownPlaying = true;
             }
         }
 

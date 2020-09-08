@@ -18,6 +18,7 @@ namespace StrefaRDM
 
         async Task onTick()
         {
+            await Delay(1);
             Ped playerPed = Game.PlayerPed;
 
             if(playerPed.IsDead)

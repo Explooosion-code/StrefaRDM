@@ -60,6 +60,7 @@ namespace StrefaRDM
             });
             Tick += noHandFight;
             Tick += drpc;
+            Tick += noPedsAndVehs;
         }
         async Task drpc()
         {
@@ -71,6 +72,14 @@ namespace StrefaRDM
             SetDiscordRichPresenceAssetText("StrefaRDM");
 
             SetRichPresence($"ID: {Game.Player.ServerId} - {Game.Player.Name} | Graczy: {Players.ToList().Count}/32");
+        }
+
+        async Task noPedsAndVehs()
+        {
+            await Delay(100);
+            Vector3 plyCoords = GetEntityCoords(GetPlayerPed(-1), true);
+            ClearAreaOfPeds(plyCoords.X, plyCoords.Y, plyCoords.Z, 200.0f, 1);
+            ClearAreaOfVehicles(plyCoords.X, plyCoords.Y, plyCoords.Z, 200.0f, true, true, true, true, true);
         }
         async Task dist()
         {
