@@ -80,8 +80,10 @@ namespace StrefaRDM_Server
 
                 foreach (KeyValuePair<string, SrdmPlayer> player in playersData)
                 {
-                    player.Value.resetKills(); // Reset all players kills
+                    player.Value.resetKills(false); // Reset all players kills. Sync set to false so you dont send a lot of events to client
                 }
+
+                syncData(); // Better to send information once after everything is done.
 
                 Exports["mysql-async"].mysql_execute("UPDATE users SET kills = 0", new{}); // Reset kills for offline players too
 
@@ -95,12 +97,12 @@ namespace StrefaRDM_Server
 
                 for (int i = 5; i > 0; i--)
                 {
-                    TriggerClientEvent("chatMessage","SYSTEM", new[] { 255, 0, 0 }, "Starting in " + i);
+                    TriggerClientEvent("chatMessage","SYSTEM", new[] { 255, 0, 0 }, "Starting in " + i); // Count down to start
                     await Delay(1000);
                 }
             } else if (timeToNextZone % 300 == 0)
             {
-                syncZoneInfo();
+                syncZoneInfo(); // Sync zone info every 5 minutes just to make sure everything is fine.
                 TriggerClientEvent("chatMessage", "SYSTEM", new[] {255, 0, 0},
                     "Map will change in: " + Math.Floor(timeToNextZone / 60.0) + " minutes!");
             }
@@ -108,29 +110,29 @@ namespace StrefaRDM_Server
 
         private void Spawned([FromSource] Player source)
         {
-            string hex = "steam:" + source.Identifiers["steam"];
+            string hex = "steam:" + source.Identifiers["steam"]; // Get player that is in the database
             Exports["mysql-async"].mysql_fetch_all("SELECT * FROM users WHERE steamhex = @sh", new 
             {
                @sh = hex
             }, new Action<List<dynamic>>((result) =>
             {
-                if (result[0] == null)
+                if (!result[0])
                 {
                     Exports["mysql-async"].mysql_execute("INSERT INTO users (steamhex, kills) VALUES (@hex , 0)",
                     new 
                     {
-                        @he = hex
+                        @hex = hex
                     });
                     
                     playersData.Add(source.Handle, new SrdmPlayer(source, source.Handle, 0, hex));
-                    syncData();
+                    syncData(); // sync after creating new player so the player is added to playerList
                     return;
                 }
 
                 int kills = result[0].kills;
                 string ped = result[0].ped;
                 playersData.Add(source.Handle, new SrdmPlayer(source, source.Handle, kills, hex, ped));
-                syncData();
+                syncData(); // sync after creating new player so the player is added to playerList
             }));
         }
 
@@ -148,8 +150,8 @@ namespace StrefaRDM_Server
                 });
             }
 
-            retVal = retVal.OrderBy(o => -1 * o.sessionKills).ToList();
-            TriggerClientEvent("srdm:syncPlayerData", retVal);
+            retVal = retVal.OrderBy(o => -1 * o.sessionKills).ToList(); // sort the table by kills
+            TriggerClientEvent("srdm:syncPlayerData", retVal); // send data to all clients
         }
         
         private void OnPlayerDropped([FromSource]Player player, string reason)
@@ -160,17 +162,17 @@ namespace StrefaRDM_Server
 
             if (srdmPlayer != null)
             {
-                savePlayer(srdmPlayer);
+                savePlayer(srdmPlayer); // save player on disconnect
             }
-            syncData();
             playersData.Remove(source);
+            syncData(); // Remove player from player list
         }
         
         private void savePed([FromSource]Player player, string pedModel)
         {
             string source = player.Handle;
 
-            if (playersData[source] != null)
+            if (playersData[source] != null && !string.IsNullOrEmpty(pedModel))
             {
                 playersData[source].ped = pedModel;
             }
@@ -178,7 +180,7 @@ namespace StrefaRDM_Server
 
         public void savePlayer(SrdmPlayer player)
         {
-            Exports["mysql-async"].mysql_execute("UPDATE users SET kills = @kills, ped = @ped WHERE steamhex = @hex",
+            Exports["mysql-async"].mysql_execute("UPDATE users SET kills = @kills, ped = @ped WHERE steamhex = @hex", // Update the db
                 new
                 {
                     @hex = player.hex,
@@ -192,7 +194,7 @@ namespace StrefaRDM_Server
             TriggerClientEvent("srdm:setCurrentPosition", Config.Positions[currentZone].Center, 
                 Config.Positions[currentZone].Respawns,
                 Config.Positions[currentZone].MaxDist
-            );
+            ); // send all zone data
         }
     }
 }

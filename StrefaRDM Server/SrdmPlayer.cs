@@ -51,19 +51,20 @@ namespace StrefaRDM_Server
             refreshWeapons();
         }
 
-        public void resetKills()
+        public void resetKills(bool sync)
         {
             sessionKills = 0;
             allKills = 0;
-            refreshWeapons();
+            refreshWeapons(sync);
         }
         
-        private void refreshWeapons()
+        private void refreshWeapons(bool sync = true)
         {
             weapons = getWeapons();
             wpnCount = weapons.Count;
             BaseScript.TriggerClientEvent(player, "srdm:updateWeapons", weapons);
-            Main.syncData();
+            if(sync)
+                Main.syncData();
         }
     }
 }
