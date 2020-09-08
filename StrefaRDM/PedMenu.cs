@@ -464,11 +464,11 @@ namespace StrefaRDM
             });
 
 
-            menu = new Menu(GetPlayerName(PlayerId()), "Wybierz swojego peda");
+            menu = new Menu(Game.Player.Name, "Pick your ped");
 
             foreach(KeyValuePair<string, string> ped in models) 
             {
-                MenuItem button = new MenuItem($"{ped.Key} ({ped.Value})", $"Wybierz {ped.Key} jako swojego peda");
+                MenuItem button = new MenuItem($"{ped.Key} ({ped.Value})", $"Pick {ped.Key} as your ped");
                 menu.AddMenuItem(button);
             }
 

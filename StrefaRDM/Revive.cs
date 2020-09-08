@@ -32,7 +32,7 @@ namespace StrefaRDM
             {
                 await Delay(0);
                 BeginScaleformMovieMethod(ScaleformHandle, "SHOW_SHARD_WASTED_MP_MESSAGE");
-                PushScaleformMovieMethodParameterString("~r~ZGINĄŁEŚ");
+                PushScaleformMovieMethodParameterString("~r~You Died");
                 if(frames > 1)
                 {
                     frames = 0;
@@ -41,13 +41,13 @@ namespace StrefaRDM
                 }
                 if (time <= 0)
                 {
-                    PushScaleformMovieMethodParameterString("Wciśnij [~b~E~w~] aby się odrodzić");
+                    PushScaleformMovieMethodParameterString("Press [~b~E~w~] to respawn");
                 } else
                 {
                     if(time == 1)
-                        PushScaleformMovieMethodParameterString($"Odrodzenie dostępne za ~b~{time}~w~ sekundę");
+                        PushScaleformMovieMethodParameterString($"Respawn available in ~b~{time}~w~ second");
                     else
-                        PushScaleformMovieMethodParameterString($"Odrodzenie dostępne za ~b~{time}~w~ sekundy");
+                        PushScaleformMovieMethodParameterString($"Respawn available in ~b~{time}~w~ seconds");
                 }
                 PushScaleformMovieMethodParameterInt(5);
                 EndScaleformMovieMethod();

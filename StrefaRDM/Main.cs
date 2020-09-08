@@ -82,7 +82,7 @@ namespace StrefaRDM
             {
                 Game.PlayerPed.Position = playerSpawnPos;
                 SetNotificationTextEntry("STRING");
-                AddTextComponentString("~r~Wyszedłeś poza teren rozgrywki!");
+                AddTextComponentString("~r~You can't leave the area of fight");
                 DrawNotification(false, true);
             }
         }

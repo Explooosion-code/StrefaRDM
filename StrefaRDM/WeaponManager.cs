@@ -26,7 +26,7 @@ namespace StrefaRDM
                 if (lastCount < WeaponList.Count && lastCount != -1)
                 {
                     SetTextEntry_2("STRING");
-                    AddTextComponentString("Zdobyłeś nową ~b~broń~w~!");
+                    AddTextComponentString("You got a new ~b~weapon~w~!");
                     DrawSubtitleTimed(15000, false);
                 }
 

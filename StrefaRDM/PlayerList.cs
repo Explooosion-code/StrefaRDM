@@ -117,7 +117,7 @@ namespace StrefaRDM
         void draw()
         {
             PushScaleformMovieFunction(scaleform, "SET_TITLE");
-            PushScaleformMovieFunctionParameterString("~b~Statystyki graczy online~w~");
+            PushScaleformMovieFunctionParameterString("~b~Scoreboard~w~");
             PopScaleformMovieFunctionVoid();
             DrawScaleformMovie(scaleform, 0.5f, 0.45f, 0.25f, 0.7f, 255, 255, 255, 255, 0);
         }
