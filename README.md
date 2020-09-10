@@ -5,8 +5,8 @@
 # StrefaRDM
 
 ### Requirements:
-*   (fivem-mysql-async)[https://github.com/brouznouf/fivem-mysql-async] - Version 2.0 or higher
-*   (Fivem Server)[https://docs.fivem.net/docs/server-manual/setting-up-a-server/]
+*   [fivem-mysql-async](https://github.com/brouznouf/fivem-mysql-async) - Version 2.0 or higher
+*   [Fivem Server](https://docs.fivem.net/docs/server-manual/setting-up-a-server/)
 
 
 ### What is StrefaRDM?
