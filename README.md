@@ -1,12 +1,22 @@
 > THIS GAMEMODE IS WIP! IT IS NOT CURRENTLY RELEASED! 
 
-<img style="max-width: 200px;" src="https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png">
+<img src="https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png">
 
 # StrefaRDM
 
-### What is StrefaRDM?
+### Requirements:
+*   (fivem-mysql-async)[https://github.com/brouznouf/fivem-mysql-async] - Version 2.0 or higher
+*   (Fivem Server)[https://docs.fivem.net/docs/server-manual/setting-up-a-server/]
 
-StrefaRDM is an open source gamemode written in c# for FiveM platform.
+
+### What is StrefaRDM?
+    StrefaRDM is an open source gamemode written in c# for FiveM platform. ETA for initial release is not known for now. Project will be released shortly as it mostly works. :+1:
+
+### Why?
+    I couldn't find any simmilar gamemode in the FiveM community that was available for free for everyone, so i thought i will write one by myself.
+
+### Live demo.
+    If you want to test this gamemode there is a live server at: ████████████████ - Currently not open for public.
 
 ### Roadmap
 
