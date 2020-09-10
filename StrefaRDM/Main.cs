@@ -113,7 +113,7 @@ namespace StrefaRDM
 
         public static void SetToRandomResp()
         {
-            Random random = new Random(GetGameTimer());
+            Random random = new Random();
 
             int randomLocation = random.Next(0, RandomRespawns.Count - 1);
 
