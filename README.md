@@ -1,6 +1,6 @@
 > THIS GAMEMODE IS WIP! IT IS NOT CURRENTLY RELEASED! 
 
-<img src="https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png">
+<img style="max-width: 200px;" src="https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png">
 
 # StrefaRDM
 
