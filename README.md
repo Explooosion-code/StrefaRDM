@@ -13,7 +13,7 @@
 StrefaRDM is an open source gamemode written in c# for FiveM platform. ETA for initial release is not known for now. Project will be released shortly as it mostly works. :+1:
 
 ## Why?
-I couldn't find any simmilar gamemode in the FiveM community that was available for free for everyone, so i thought i will write one by myself.
+I couldn't find any simmilar gamemode in the FiveM community that was available for free to everyone, so i thought i will write one by myself.
 
 ## Live demo.
 If you want to test this gamemode there is a live server at: ████████████████ - Currently not open for public.
