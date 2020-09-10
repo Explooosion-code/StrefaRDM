@@ -2,7 +2,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png">
 
-# StrefaRDM
+# **StrefaRDM**
 
 # Requirements:
 *   [fivem-mysql-async](https://github.com/brouznouf/fivem-mysql-async) - Version 2.0 or higher
