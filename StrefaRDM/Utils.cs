@@ -1,4 +1,6 @@
-﻿using CitizenFX.Core.Native;
+﻿using System.Threading.Tasks;
+using CitizenFX.Core;
+using static CitizenFX.Core.Native.API;
 
 namespace StrefaRDM
 {
@@ -8,7 +10,7 @@ namespace StrefaRDM
     {
       string str;
       int num = 0;
-      API.GetPedLastDamageBone(ped, ref num);
+      GetPedLastDamageBone(ped, ref num);
       switch (num)
       {
         case 0:
@@ -310,6 +312,45 @@ namespace StrefaRDM
           break;
       }
       return str;
+    }
+
+    public static void ShowNotif(string message)
+    {
+      SetNotificationTextEntry("STRING");
+      AddTextComponentString(message);
+      DrawNotification(false, true);
+    }
+
+    public static async Task ShowBigMessage(string message, string subMessage, int time, bool click = false)
+    {
+      int scaleformHandle = RequestScaleformMovie("mp_big_message_freemode");
+      float elapsed = 0;
+      while (!HasScaleformMovieLoaded(scaleformHandle)) {
+        await BaseScript.Delay(1);
+      }
+
+      if (click)
+      {
+        PlaySoundFrontend(-1, "HACKING_CLICK", "", true);
+      }
+
+      while (time > 0)
+      {
+        await BaseScript.Delay(0);
+        BeginScaleformMovieMethod(scaleformHandle, "SHOW_SHARD_WASTED_MP_MESSAGE");
+        PushScaleformMovieMethodParameterString(message);
+        PushScaleformMovieMethodParameterString(subMessage);
+        PushScaleformMovieMethodParameterInt(0);
+        EndScaleformMovieMethod();
+        DrawScaleformMovieFullscreen(scaleformHandle, 255, 255, 255, 255, 0);
+        if(elapsed > 1)
+        {
+          elapsed = 0;
+          if(time > 0)
+            time--;
+        }
+        elapsed += GetFrameTime();
+      }
     }
   }
 }

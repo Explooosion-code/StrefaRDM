@@ -90,9 +90,7 @@ namespace StrefaRDM
             if (dist > maxDist && !Game.PlayerPed.IsDead)
             {
                 Game.PlayerPed.Position = playerSpawnPos;
-                SetNotificationTextEntry("STRING");
-                AddTextComponentString("~r~You can't leave the area of fight");
-                DrawNotification(false, true);
+                Utils.ShowNotif("~r~You can't leave the area of fight");
             }
         }
 

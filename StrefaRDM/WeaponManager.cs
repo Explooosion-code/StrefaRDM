@@ -25,9 +25,7 @@ namespace StrefaRDM
                 WeaponList = temp;
                 if (lastCount < WeaponList.Count && lastCount != -1)
                 {
-                    SetTextEntry_2("STRING");
-                    AddTextComponentString("You got a new ~b~weapon~w~!");
-                    DrawSubtitleTimed(15000, false);
+                    Utils.ShowBigMessage("~g~LVLUP", "~b~You got a new weapon", 5, true);
                 }
 
                 lastCount = WeaponList.Count;

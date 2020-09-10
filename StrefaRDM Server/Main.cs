@@ -19,6 +19,12 @@ namespace StrefaRDM_Server
 
         public Main()
         {
+            /*RegisterCommand("addkill", new Action<int, List<object>, string>((source, args, raw) =>
+            {
+                string src = source.ToString();
+                playersData[src].addKill();
+            }), false);*/
+            
             EventHandlers["playerDropped"] += new Action<Player, string>(OnPlayerDropped);
             EventHandlers["srdm:savePed"] += new Action<Player, string>(savePed);
             EventHandlers["srdm:onPlayerKilled"] += new Action<int>((id) =>
@@ -172,7 +178,7 @@ namespace StrefaRDM_Server
             }
             catch(Exception e)
             {
-                Debug.WriteLine(e.ToString());
+                Debug.WriteLine($"Player {player.Handle} was not in StrefaRDM player list!");
             }
         }
         
