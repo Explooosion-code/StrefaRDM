@@ -1,6 +1,6 @@
 > THIS GAMEMODE IS CURRENTLY IN DEVELOPMENT!
 
-(https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png)
+![LOGO](https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png)
 
 # **StrefaRDM**
 
