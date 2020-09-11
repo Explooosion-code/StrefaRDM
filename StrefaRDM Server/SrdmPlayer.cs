@@ -64,7 +64,7 @@ namespace StrefaRDM_Server
             wpnCount = weapons.Count;
             BaseScript.TriggerClientEvent(player, "srdm:updateWeapons", weapons);
             if(sync)
-                Main.syncData();
+                Main.SyncData();
         }
     }
 }

@@ -39,7 +39,7 @@ namespace StrefaRDM_Server
             
             EventHandlers["srdm:requestUserInfo"] += new Action(() =>
             {
-                syncData();
+                SyncData();
             });
             
             EventHandlers["srdm:getCurrentPosition"] += new Action(() =>
@@ -89,7 +89,7 @@ namespace StrefaRDM_Server
                     player.Value.resetKills(false); // Reset all players kills. Sync set to false so you dont send a lot of events to client
                 }
 
-                syncData(); // Better to send information once after everything is done.
+                SyncData(); // Better to send information once after everything is done.
 
                 Exports["mysql-async"].mysql_execute("UPDATE users SET kills = 0", new{}); // Reset kills for offline players too
 
@@ -131,18 +131,18 @@ namespace StrefaRDM_Server
                     });
                     
                     playersData.Add(source.Handle, new SrdmPlayer(source, source.Handle, 0, hex));
-                    syncData(); // sync after creating new player so the player is added to playerList
+                    SyncData(); // sync after creating new player so the player is added to playerList
                     return;
                 }
 
                 int kills = result[0].kills;
                 string ped = result[0].ped;
                 playersData.Add(source.Handle, new SrdmPlayer(source, source.Handle, kills, hex, ped));
-                syncData(); // sync after creating new player so the player is added to playerList
+                SyncData(); // sync after creating new player so the player is added to playerList
             }));
         }
 
-        public static async Task syncData()
+        public static void SyncData()
         {
             List<dynamic> retVal = new List<dynamic>();
 
@@ -174,7 +174,7 @@ namespace StrefaRDM_Server
                 }
 
                 playersData.Remove(source);
-                syncData(); // Remove player from player list
+                SyncData(); // Remove player from player list
             }
             catch(Exception e)
             {
