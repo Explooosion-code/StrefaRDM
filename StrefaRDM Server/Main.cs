@@ -122,7 +122,7 @@ namespace StrefaRDM_Server
                @sh = hex
             }, new Action<List<dynamic>>((result) =>
             {
-                if (result[0] == null)
+                if (result.Count == 0)
                 {
                     Exports["mysql-async"].mysql_execute("INSERT INTO users (steamhex, kills) VALUES (@hex , 0)",
                     new 
@@ -152,7 +152,7 @@ namespace StrefaRDM_Server
                 {
                     name = GetPlayerName(pair.Value.source), 
                     sourceId = int.Parse(pair.Value.source),
-                    sessionKills = pair.Value.sessionKills
+                    pair.Value.sessionKills
                 });
             }
 
