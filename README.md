@@ -1,4 +1,4 @@
-> THIS GAMEMODE IS CURRENTLY IN DEVELOPMENT!
+> THIS GAMEMODE IS CURRENTLY IN DEVELOPMENT! | ABANDONED (not developed now as I don't have time to keep it up. Feel free to contribute)
 
 ![LOGO](https://cdn.discordapp.com/attachments/416318109738336261/753696938053992620/RDM_Logo.png)
 
